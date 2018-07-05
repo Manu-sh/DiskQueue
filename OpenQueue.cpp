@@ -35,7 +35,7 @@ bool OpenQueue<std::string>::push(const std::string &o) {
 template <>
 std::string OpenQueue<std::string>::front() const {
 	UserData data{diskqueue_front(queue)};
-	std::string ret{(const char *)data.data, (uint32_t)data.size};
+	std::string ret{(const char *)data.data, (typename std::string::size_type)data.size};
 	free(data.data);
 	return ret;
 }
@@ -43,7 +43,7 @@ std::string OpenQueue<std::string>::front() const {
 template <>
 std::string OpenQueue<std::string>::pop() {
 	UserData data{diskqueue_pop(queue)};
-	std::string ret{(const char *)data.data, (uint32_t)data.size};
+	std::string ret{(const char *)data.data, (typename std::string::size_type)data.size};
 	free(data.data);
 	return ret;
 }

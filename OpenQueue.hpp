@@ -7,8 +7,6 @@ template <typename T>
 class OpenQueue {
 
 	public:
-		using Dealloc = decltype(free) *;
-
 		OpenQueue(const char *file);
 		~OpenQueue();
 
