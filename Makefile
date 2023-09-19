@@ -1,5 +1,5 @@
 LDLIBS=-lgdbm -lgdbm_compat
-CXXFLAGS=-O3 -ffast-math -Wall -Wextra -pedantic -std=c++11 -pipe -march=native -mtune=native
+CXXFLAGS=-O3 -ffast-math -Wall -Wextra -pedantic -std=c++11 -pipe #-march=native -mtune=native
 .PHONY: all clean
 
 all: main.cpp src/libdiskqueue.a OpenQueue.o
